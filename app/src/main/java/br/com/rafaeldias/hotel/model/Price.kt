@@ -1,6 +1,6 @@
 package br.com.rafaeldias.cvchotel.ui.model
 
-data class Price(
+class Price(
     val adult: Double,
     val child: Double
 )

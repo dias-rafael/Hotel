@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import br.com.rafaeldias.cvchotel.ui.model.HoteisList
 import br.com.rafaeldias.cvchotel.ui.model.Hotel
 import br.com.rafaeldias.hotel.R
 import br.com.rafaeldias.hotel.databinding.ItemDetailBinding
@@ -24,7 +25,7 @@ class HotelDetailListAdapter: RecyclerView.Adapter<HotelDetailListAdapter.ViewHo
         return if(::hotelDetail.isInitialized) hotelDetail.size else 0
     }
 
-    fun updateHotelList(hotelDetailList:List<Hotel>){
+    fun updateHotelDetailList(hotelDetailList:List<Hotel>){
         this.hotelDetail = hotelDetailList
         notifyDataSetChanged()
     }

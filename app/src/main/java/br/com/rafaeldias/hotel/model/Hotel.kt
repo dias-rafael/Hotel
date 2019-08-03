@@ -1,6 +1,6 @@
 package br.com.rafaeldias.cvchotel.ui.model
 
-data class Hotel(
+class Hotel(
     val cityCode: Int,
     val cityName: String,
     val id: Int,

@@ -2,6 +2,7 @@ package br.com.rafaeldias.hotel.ui.hotel
 
 import android.arch.lifecycle.MutableLiveData
 import android.view.View
+import br.com.rafaeldias.cvchotel.ui.model.HoteisList
 import br.com.rafaeldias.cvchotel.ui.model.Hotel
 import br.com.rafaeldias.hotel.R
 import br.com.rafaeldias.hotel.base.BaseViewModel

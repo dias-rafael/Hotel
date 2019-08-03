@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Hotel CVC</string>
     <string name="retry">Retry</string>
-    <string name="hotel_error">An error occurred while loading the posts</string>
+    <string name="hotel_error">An error occurred while loading the hotels</string>
+    <string name="hotel_detail_error">An error occurred while loading the hotel details</string>
     <string name="title_hotel">Nome do Hotel</string>
     <string name="title_cidade">Nome da Cidade</string>
     <string name="price_room">R$ 999,99</string>
@@ -9,4 +10,5 @@
     <string name="title_tipo">Tipo Quarto</string>
     <string name="unknown_error">unknown_error</string>
     <string name="loading">Carregando...</string>
+    <string name="title_details_page">Detalhes do Hotel</string>
 </resources>

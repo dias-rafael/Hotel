@@ -1,6 +1,7 @@
 package br.com.rafaeldias.hotel.injection.component
 
 import br.com.rafaeldias.hotel.injection.module.NetworkModule
+import br.com.rafaeldias.hotel.ui.hotel.HotelDetailListViewModel
 import br.com.rafaeldias.hotel.ui.hotel.HotelListViewModel
 import dagger.Component
 import javax.inject.Singleton
@@ -13,6 +14,8 @@ interface ViewModelInjector {
      * @param postListViewModel PostListViewModel in which to inject the dependencies
      */
     fun inject(hotelListViewModel: HotelListViewModel)
+
+    fun injectDetail(hotelDetailListViewModel: HotelDetailListViewModel)
 
     @Component.Builder
     interface Builder {

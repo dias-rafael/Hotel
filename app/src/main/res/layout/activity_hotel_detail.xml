@@ -3,6 +3,12 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools" android:background="@color/backgroundColor">
 
+    <data>
+        <variable
+                name="viewModel"
+                type="br.com.rafaeldias.hotel.ui.hotel.HotelDetailListViewModel" />
+    </data>
+
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">

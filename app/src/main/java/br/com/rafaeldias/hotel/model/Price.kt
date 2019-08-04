@@ -6,6 +6,5 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class Price(
     val adult: Double,
-    val child: Double,
-    val roomId: Int
+    val child: Double
 ) : Parcelable

@@ -7,6 +7,7 @@ import kotlinx.android.parcel.Parcelize
 data class Room(
     val categoryName: String,
     val price: Price,
-    val roomID: Int,
-    val hotelId: Int
+    val roomID: Int
 ) : Parcelable
+
+

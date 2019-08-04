@@ -35,7 +35,7 @@ class HotelListViewModel: BaseViewModel(){
             .doOnSubscribe { onRetrieveHotelListStart() }
             .doOnTerminate { onRetrieveHotelListFinish() }
             .subscribe(
-                { result -> onRetrieveHotelListSuccess(result) },
+                { result -> onRetrieveHotelListSuccess(result.sortedBy { it.roomMinorPrice().price.adult })},
                 { onRetrieveHotelListError() }
             )
     }

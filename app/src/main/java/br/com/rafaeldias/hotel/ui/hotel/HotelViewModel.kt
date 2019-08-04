@@ -15,8 +15,8 @@ class HotelViewModel: BaseViewModel() {
     fun bind(hotel: Hotel){
         hotelTitle.value = hotel.name
         hotelCidade.value = hotel.cityName
-        hotelCategoriaQuarto.value = hotel.rooms[0].categoryName+ " Adulto"
-        hotelPrecoQuarto.value = Format.Currency(hotel.rooms[0].price.adult)
+        hotelCategoriaQuarto.value = hotel.roomMinorPrice().categoryName+ " Adulto"
+        hotelPrecoQuarto.value = Format.Currency(hotel.roomMinorPrice().price.adult)
     }
 
     fun getHotelTitle():MutableLiveData<String>{

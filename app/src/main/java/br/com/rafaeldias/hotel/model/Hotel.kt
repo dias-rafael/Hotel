@@ -14,5 +14,5 @@ data class Hotel(
 ) : Parcelable
 
 {
-    fun roomMinorPrice() = rooms.sortedBy { it.price.adult }.first()
+    fun roomMinorPrice() =  rooms.sortedBy { it.price.adult }.first()
 }

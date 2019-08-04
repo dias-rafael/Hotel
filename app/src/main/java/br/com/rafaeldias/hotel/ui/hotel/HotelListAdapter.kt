@@ -5,7 +5,6 @@ import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import br.com.rafaeldias.cvchotel.ui.model.HoteisList
 import br.com.rafaeldias.cvchotel.ui.model.Hotel
 import br.com.rafaeldias.hotel.R
 import br.com.rafaeldias.hotel.databinding.ItemHotelBinding
@@ -39,8 +38,7 @@ class HotelListAdapter: RecyclerView.Adapter<HotelListAdapter.ViewHolder>() {
             binding.viewModel = viewModel
             binding.btListaDetalhe.setOnClickListener{
                 val intent = Intent(binding.btListaDetalhe.context, HotelDetailActivity::class.java)
-                intent.putExtra("title_hotel",binding.tvListaHotel.text)
-                intent.putExtra("title_cidade",binding.tvListaCidade.text)
+                intent.putExtra("detalhe_hotel", hotel)
                 binding.btListaDetalhe.context.startActivity(intent)
             }
         }

@@ -35,10 +35,10 @@
             android:layout_marginLeft="16dp" android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginRight="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/btListaDetalhe"/>
     <TextView
-            android:text="@string/price_room"
+            android:text="@string/price_room_adulto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tvListaValor" android:textStyle="bold"
+            android:id="@+id/tvValorQuartoAdulto" android:textStyle="bold"
             app:mutableText="@{viewModel.getHotelPrecoQuarto()}"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/price_font_size"

@@ -1,50 +1,28 @@
 package br.com.rafaeldias.hotel.ui.hotel
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
-import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.annotation.StringRes
-import android.support.design.widget.Snackbar
-import android.support.v7.widget.LinearLayoutManager
+import br.com.rafaeldias.cvchotel.ui.model.Hotel
 import br.com.rafaeldias.hotel.R
-import br.com.rafaeldias.hotel.databinding.ActivityHotelDetailBinding
 import kotlinx.android.synthetic.main.activity_hotel_detail.*
 
 class HotelDetailActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHotelDetailBinding
-    private lateinit var viewModel: HotelDetailListViewModel
-
-    private var errorSnackbar: Snackbar? = null
-
-    override fun onCreate(savedInstanceState: Bundle?){
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_hotel_detail)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_hotel_detail)
-        binding.hotelDetail.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        var detalhe_hotel = intent!!.getParcelableExtra<Hotel>("detalhe_hotel")
 
-        viewModel = ViewModelProviders.of(this).get(HotelDetailListViewModel::class.java)
-        viewModel.errorMessage.observe(this, Observer {
-                errorMessage -> if(errorMessage != null) showError(errorMessage) else hideError()
-        })
-        binding.viewModel = viewModel
+        //hotel_detail.layoutManager = LinearLayoutManager(this)
+        //hotel_detail.adapter = HotelDetailListAdapter(detalhe_hotel)
 
-        var title_hotel = intent!!.getStringExtra("title_hotel")
-        var title_cidade = intent!!.getStringExtra("title_cidade")
+        var title_hotel = detalhe_hotel.name
+        var title_cidade = detalhe_hotel.cityName
 
         tvDetalheHotel.setText(title_hotel)
         tvDetalheCidade.setText(title_cidade)
-    }
 
-    private fun showError(@StringRes errorMessage:Int){
-        errorSnackbar = Snackbar.make(binding.root, errorMessage, Snackbar.LENGTH_INDEFINITE)
-        errorSnackbar?.setAction(R.string.retry, viewModel.errorClickListener)
-        errorSnackbar?.show()
-    }
-
-    private fun hideError(){
-        errorSnackbar?.dismiss()
+        supportActionBar?.title = title_hotel
     }
 }

@@ -11,14 +11,17 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".ui.hotel.HotelDetailActivity"
-        android:label="@string/title_details_page"
-        android:launchMode="singleTop">
-                  <meta-data android:name="android.support.PARENT_ACTIVITY"
-                             android:value=".ui.hotel.HotelListActivity"/>
+        <activity
+                android:name=".ui.hotel.HotelDetailActivity"
+                android:label="@string/title_details_page"
+                android:launchMode="singleTop">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".ui.hotel.HotelListActivity"/>
         </activity>
-        <activity android:name=".ui.hotel.HotelListActivity"
-                  android:launchMode="singleTop">
+        <activity
+                android:name=".ui.hotel.HotelListActivity"
+                android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

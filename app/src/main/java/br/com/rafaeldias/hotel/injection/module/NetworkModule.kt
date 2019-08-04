@@ -11,25 +11,16 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 @Module
-// Safe here as we are dealing with a Dagger 2 module
 @Suppress("unused")
 object NetworkModule {
-    /**
-     * Provides the Post service implementation.
-     * @param retrofit the Retrofit object used to instantiate the service
-     * @return the Post service implementation.
-     */
+
     @Provides
     @Reusable
     @JvmStatic
     internal fun provideHotelApi(retrofit: Retrofit): HotelApi {
         return retrofit.create(HotelApi::class.java)
     }
-
-    /**
-     * Provides the Retrofit object.
-     * @return the Retrofit object
-     */
+    
     @Provides
     @Reusable
     @JvmStatic

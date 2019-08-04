@@ -38,8 +38,6 @@ class HotelListAdapter: RecyclerView.Adapter<HotelListAdapter.ViewHolder>() {
             binding.viewModel = viewModel
             binding.btListaDetalhe.setOnClickListener{
                 val intent = Intent(binding.btListaDetalhe.context, HotelDetailActivity::class.java)
-                intent.putExtra("nome_hotel", hotel.name.toString())
-                intent.putExtra("cidade_hotel", hotel.cityName.toString())
                 intent.putExtra("detalhe_hotel", hotel)
                 binding.btListaDetalhe.context.startActivity(intent)
             }

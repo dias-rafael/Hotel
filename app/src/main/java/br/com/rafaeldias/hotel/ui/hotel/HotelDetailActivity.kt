@@ -13,15 +13,13 @@ class HotelDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotel_detail)
 
-        var nome_hotel = intent!!.getStringExtra("nome_hotel")
-        var cidade_hotel = intent!!.getStringExtra("cidade_hotel")
         var detalhe_hotel = intent!!.getParcelableExtra<Hotel>("detalhe_hotel")
 
-        hotel_detail.layoutManager = LinearLayoutManager(this)
-        hotel_detail.adapter = HotelDetailListAdapter(detalhe_hotel.rooms)
+        rvDetalheHotel.layoutManager = LinearLayoutManager(this)
+        rvDetalheHotel.adapter = HotelDetailListAdapter(detalhe_hotel.rooms)
 
-        var title_hotel = nome_hotel
-        var title_cidade = cidade_hotel
+        var title_hotel = detalhe_hotel.name
+        var title_cidade = detalhe_hotel.cityName
 
         tvDetalheHotel.setText(title_hotel)
         tvDetalheCidade.setText(title_cidade)

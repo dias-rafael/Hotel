@@ -22,7 +22,7 @@ class HotelListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hotel_list)
-        binding.hotelList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.rvListaHoteis.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         viewModel = ViewModelProviders.of(this).get(HotelListViewModel::class.java)
         viewModel.errorMessage.observe(this, Observer {

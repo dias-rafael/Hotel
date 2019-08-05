@@ -12,12 +12,12 @@ import br.com.rafaeldias.hotel.databinding.ItemHotelBinding
 class HotelListAdapter: RecyclerView.Adapter<HotelListAdapter.ViewHolder>() {
     private lateinit var hotelList:List<Hotel>
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotelListAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding: ItemHotelBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_hotel, parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: HotelListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(hotelList[position])
     }
 
@@ -37,7 +37,7 @@ class HotelListAdapter: RecyclerView.Adapter<HotelListAdapter.ViewHolder>() {
             viewModel.bind(hotel)
             binding.viewModel = viewModel
             binding.btListaDetalhe.setOnClickListener{
-                val intent = Intent(binding.btListaDetalhe.context, HotelDetailActivity::class.java)
+                val intent = Intent(binding.btListaDetalhe.context, DetailListActivity::class.java)
                 intent.putExtra("detalhe_hotel", hotel)
                 binding.btListaDetalhe.context.startActivity(intent)
             }

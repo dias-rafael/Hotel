@@ -12,7 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".ui.hotel.HotelDetailActivity"
+                android:name=".ui.hotel.DetailListActivity"
                 android:label="@string/title_details_page"
                 android:launchMode="singleTop">
             <meta-data

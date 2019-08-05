@@ -10,13 +10,13 @@ class HotelViewModel: BaseViewModel() {
     private val hotelTitle = MutableLiveData<String>()
     private val hotelCidade = MutableLiveData<String>()
     private val hotelCategoriaQuarto = MutableLiveData<String>()
-    private val hotelPrecoQuarto = MutableLiveData<String>()
+    private val hotelMenorPrecoQuartoAdulto = MutableLiveData<String>()
 
     fun bind(hotel: Hotel){
         hotelTitle.value = hotel.name
         hotelCidade.value = hotel.cityName
         hotelCategoriaQuarto.value = hotel.roomMinorPrice().categoryName+ " Adulto"
-        hotelPrecoQuarto.value = Format.Currency(hotel.roomMinorPrice().price.adult)
+        hotelMenorPrecoQuartoAdulto.value = Format.Currency(hotel.roomMinorPrice().price.adult)
     }
 
     fun getHotelTitle():MutableLiveData<String>{
@@ -31,7 +31,7 @@ class HotelViewModel: BaseViewModel() {
         return hotelCategoriaQuarto
     }
 
-    fun getHotelPrecoQuarto():MutableLiveData<String>{
-        return hotelPrecoQuarto
+    fun getHotelMenorPrecoQuartoAdulto():MutableLiveData<String>{
+        return hotelMenorPrecoQuartoAdulto
     }
 }

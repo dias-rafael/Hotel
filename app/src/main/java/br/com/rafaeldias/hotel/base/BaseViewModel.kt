@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModel
 import br.com.rafaeldias.hotel.injection.component.DaggerViewModelInjector
 import br.com.rafaeldias.hotel.injection.component.ViewModelInjector
 import br.com.rafaeldias.hotel.injection.module.NetworkModule
+import br.com.rafaeldias.hotel.ui.hotel.DetailListViewModel
 import br.com.rafaeldias.hotel.ui.hotel.HotelListViewModel
 
 abstract class BaseViewModel: ViewModel(){
@@ -19,6 +20,7 @@ abstract class BaseViewModel: ViewModel(){
     private fun inject() {
         when (this) {
             is HotelListViewModel -> injector.inject(this)
+            is DetailListViewModel -> injector.injectDetail(this)
         }
     }
 }

@@ -2,7 +2,6 @@
     <string name="app_name">Hotel CVC</string>
     <string name="retry">Retry</string>
     <string name="hotel_error">An error occurred while loading the hotels</string>
-    <string name="hotel_detail_error">An error occurred while loading the hotel details</string>
     <string name="title_hotel">Nome do Hotel</string>
     <string name="title_cidade">Nome da Cidade</string>
     <string name="price_room_adulto">R$ 999,99</string>
